@@ -91,6 +91,10 @@ h1,h2,h3{line-height:1.4;letter-spacing:.04em;font-weight:900}
 .chips{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .chip{background:var(--white);text-decoration:none;display:flex;flex-direction:column;border:1px solid var(--line)}
 .chip-color{height:140px;position:relative}
+.photo{aspect-ratio:4/3;overflow:hidden;background:#e6e7ea}
+.photo.tall{aspect-ratio:4/5}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo.face img{object-position:50% 35%}
 /* 写真枠と、その下の色の帯（写真が入ったら .ph を外して中に <img> を入れる） */
 .chip-photo{aspect-ratio:4/3}
 .chip-photo img,.svc-photo img{width:100%;height:100%;object-fit:cover}
@@ -196,6 +200,10 @@ a.chip:hover .chip-color{filter:brightness(1.06)}
 .tel-box .tel{font-family:var(--font-en);font-weight:700;font-size:clamp(26px,3vw,34px);letter-spacing:.06em;color:var(--accent);text-decoration:none}
 
 /* ---------- 会社概要 ---------- */
+.greeting{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,80px);align-items:start}
+.greeting p+p{margin-top:1.2em}
+.greeting .sign{margin-top:2em;text-align:right;font-weight:700}
+@media (max-width:820px){.greeting{grid-template-columns:1fr}.greeting .ph.tall{aspect-ratio:4/3}}
 .info{width:100%;border-collapse:collapse}
 .info th,.info td{text-align:left;padding:18px 0;border-bottom:1px solid var(--line);vertical-align:top}
 .info th{width:9em;color:var(--navy);font-weight:700}
