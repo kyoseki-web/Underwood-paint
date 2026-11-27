@@ -34,7 +34,7 @@ const SCAFFOLD_RATE = 1.7; // 足場面積 ≒ 外壁面積 × 1.7
 const ROOF_RATE = 1.25; // 屋根面積 ≒ 1階の床面積 × 1.25（軒の出を含む）
 
 const yen = n => Math.round(n).toLocaleString('ja-JP');
-const man = n => (Math.round(n / 1000) / 10).toLocaleString('ja-JP', { maximumFractionDigits: 1 });
+const man = n => Math.round(n / 10000).toLocaleString('ja-JP');
 
 function calc(v) {
   const rows = [];
